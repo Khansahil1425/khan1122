@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahil Nissar Khan - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2b5876;
+    }
+    .skills-grid, .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .skill, .project {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-weight: 500;
+    }
+    .experience, .education {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2b5876;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+
+<style>
+/* Skill transition animations */
+.skill {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: skillFadeUp 0.6s ease forwards;
+}
+
+/* Staggered animation for each skill */
+.skills-grid .skill:nth-child(1) { animation-delay: 0.1s; }
+.skills-grid .skill:nth-child(2) { animation-delay: 0.2s; }
+.skills-grid .skill:nth-child(3) { animation-delay: 0.3s; }
+.skills-grid .skill:nth-child(4) { animation-delay: 0.4s; }
+.skills-grid .skill:nth-child(5) { animation-delay: 0.5s; }
+.skills-grid .skill:nth-child(6) { animation-delay: 0.6s; }
+.skills-grid .skill:nth-child(7) { animation-delay: 0.7s; }
+.skills-grid .skill:nth-child(8) { animation-delay: 0.8s; }
+.skills-grid .skill:nth-child(9) { animation-delay: 0.9s; }
+.skills-grid .skill:nth-child(10) { animation-delay: 1s; }
+.skills-grid .skill:nth-child(11) { animation-delay: 1.1s; }
+.skills-grid .skill:nth-child(12) { animation-delay: 1.2s; }
+
+@keyframes skillFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<!-- Global Animation Styles -->
+<style>
+  /* Smooth fade + slide */
+  .slide-section {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUpFade 1.2s ease forwards;
+  }
+
+  /* Stagger animation for sections */
+  .slide-section:nth-child(1) { animation-delay: 0.2s; }
+  .slide-section:nth-child(2) { animation-delay: 0.4s; }
+  .slide-section:nth-child(3) { animation-delay: 0.6s; }
+  .slide-section:nth-child(4) { animation-delay: 0.8s; }
+  .slide-section:nth-child(5) { animation-delay: 1s; }
+  .slide-section:nth-child(6) { animation-delay: 1.2s; }
+
+  @keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Skill and project hover animations */
+  .slide-skill-box, .slide-project-box {
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .slide-skill-box:hover, .slide-project-box:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.15);
+  }
+
+  /* Header animation */
+  header h1 {
+    animation: fadeDown 1.2s ease forwards;
+  }
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  header p {
+    opacity: 0;
+    animation: fadeInText 1.5s ease forwards;
+  }
+  header p:nth-child(2) { animation-delay: 0.3s; }
+  header p:nth-child(3) { animation-delay: 0.5s; }
+  header p:nth-child(4) { animation-delay: 0.7s; }
+
+  @keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Sahil Nissar Khan</h1>
+    <p>UI/UX Designer • Frontend Developer • Computer Science Student</p>
+    <p>Email: sahilkhann1425@gmail.com | Phone: +91-7780952526</p>
+    <p>Location: Quziabad, Kralgund, Kupwara</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Motivated and detail-oriented Computer Science student with experience in UI/UX design and Frontend Web Development. Skilled in HTML, CSS, JavaScript, MySQL, MongoDB, and PHP. Strong foundation in responsive design and problem-solving with a focus on clean, efficient code.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">UI/UX Design</div>
+        <div class="skill">Wireframing</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">WordPress</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Adobe Photoshop</div>
+        <div class="skill">Content Marketing</div>
+        <div class="skill">Social Media Management</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="experience">
+        <h3>Operator — AB Srinagar (03/2022 - Present)</h3>
+        <ul>
+          <li>Conducted market research to identify potential customers.</li>
+          <li>Ensured compliance with company policies and procedures.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education">
+        <h3>B.Sc Physics & BCA (Ongoing) — Islamia College of Science & Commerce, Hawal SGR (09/2025)</h3>
+      </div>
+      <div class="education">
+        <h3>Diploma in Computer Applications & IoT — (02/2025)</h3>
+      </div>
+      <div class="education">
+        <h3>Higher Secondary (PCB) — Govt Boys Higher Secondary School Zadibal (03/2022)</h3>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>Developed a fully responsive personal portfolio using HTML, CSS, JavaScript, with PHP backend integration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <p><strong>Urdu:</strong> Native</p>
+      <p><strong>English:</strong> Conversational</p>
+      <p><strong>Hindi:</strong> Basic</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Sahil Nissar Khan — Portfolio Website</p>
+  </footer>
+
+  
+  <!-- Slide Navigation Style -->
+  <style>
+    .slide-section {
+      padding: 80px 20px;
+      background: white;
+      margin: 40px 0;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #4e4376;
+      font-weight: 700;
+    }
+
+    .slide-content {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .slide-skill-box, .slide-project-box {
+      display: inline-block;
+      background: #f5f7fa;
+      padding: 15px 25px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  </style>
+
+  <!-- Summary Slide -->
+  <section class="slide-section">
+    <h2 class="slide-title">Professional Summary</h2>
+    <p class="slide-content">Motivated and detail-oriented Computer Science student with experience in UI/UX design and Frontend Web Development. Skilled in HTML, CSS, JavaScript, MySQL, MongoDB, PHP and more. Quick learner with strong problem‑solving abilities.</p>
+  </section>
+
+  <!-- Skills Slide -->
+  <section class="slide-section">
+    <h2 class="slide-title">Skills</h2>
+    <div class="slide-content">
+      <span class="slide-skill-box">HTML</span>
+      <span class="slide-skill-box">CSS</span>
+      <span class="slide-skill-box">JavaScript</span>
+      <span class="slide-skill-box">UI/UX Design</span>
+      <span class="slide-skill-box">Wireframing</span>
+      <span class="slide-skill-box">MySQL</span>
+      <span class="slide-skill-box">MongoDB</span>
+      <span class="slide-skill-box">WordPress</span>
+      <span class="slide-skill-box">GitHub</span>
+      <span class="slide-skill-box">Adobe Photoshop</span>
+      <span class="slide-skill-box">Content Marketing</span>
+      <span class="slide-skill-box">Social Media Management</span>
+    </div>
+  </section>
+
+  <!-- Experience Slide -->
+  <section class="slide-section">
+    <h2 class="slide-title">Experience</h2>
+    <p class="slide-content"><strong>Operator — AB Srinagar (03/2022 - Present)</strong><br>Conducted market research, identified customers, and ensured compliance with company policy.</p>
+  </section>
+
+  <!-- Education Slide -->
+  <section class="slide-section">
+    <h2 class="slide-title">Education</h2>
+    <p class="slide-content">
+      <strong>B.Sc Physics & BCA — Islamia College (2025)</strong><br>
+      <strong>Diploma in Computer Applications & IoT (2025)</strong><br>
+      <strong>Higher Secondary (PCB) — Govt Boys HS School Zadibal (2022)</strong>
+    </p>
+  </section>
+
+  <!-- Projects Slide -->
+  <section class="slide-section">
+    <h2 class="slide-title">Projects</h2>
+    <div class="slide-content">
+      <div class="slide-project-box">Portfolio Website — Built using HTML, CSS, JS & PHP backend</div>
+    </div>
+  </section>
+
+  <!-- Languages Slide -->
+  <section class="slide-section">
+    <h2 class="slide-title">Languages</h2>
+    <p class="slide-content"><strong>Urdu:</strong> Native &nbsp; | &nbsp; <strong>English:</strong> Conversational &nbsp; | &nbsp; <strong>Hindi:</strong> Basic</p>
+  </section>
+
+</body>
+</html>
